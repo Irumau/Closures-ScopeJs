@@ -22,7 +22,15 @@ Las variables globales son aquellas que se encuentran declaradas fuera de los bl
 En el siguiente ejemplo, mira el código y piensa qué mostrará en consola. Una vez tengas las respuestas, abre la consola. ¿Qué sucedió? 
 </p>
 
-[img](https://1drv.ms/w/s!ArRVF7ZMdzjPl298qcQcXXTJ4oSL?e=hMCRE4)
+`
+ var nombre = "JavaScript";
+ 
+ function saludar(){
+    console.log("Hola " + nombre);
+ }
+ 
+ saludar()  // "Hola JavaScript"
+`
 
 <p>
 Con este ejemplo podemos concluir que la función saludar tiene acceso a la variable nombre. ¿Por qué? Porque la variable nombre está en un scope global. 
