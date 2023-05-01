@@ -22,11 +22,14 @@ Las variables globales son aquellas que se encuentran declaradas fuera de los bl
 En el siguiente ejemplo, mira el código y piensa qué mostrará en consola. Una vez tengas las respuestas, abre la consola. ¿Qué sucedió? 
 </p>
 
-```html
-<html>
-  <head>
-  </head>
-</html>
+```JavaScript
+ var nombre = "javaScript";
+ 
+ function saludar(){
+    console.log("Hola" + nombre);
+ }
+ 
+ saludar()
 ```  
   
 
