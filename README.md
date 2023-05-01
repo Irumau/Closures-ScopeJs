@@ -46,7 +46,16 @@ Las variables locales son aquellas que se encuentran declaradas dentro de los bl
 Observa el siguiente código y piensa cuál será el resultado. 
 </p>
 
-# img2
+
+```JavaScript 
+ function saludar(){
+    var nombre = "Andres";
+    console.log("Hola" + nombre);
+ }
+ 
+ saludar();
+ console.log(nombre);
+```  
 
 <p>
 Primeramente, al invocarse la función saludo imprimirá "Andres" por consola, pero inmediatamente después, existirá un error de referencia. 
@@ -74,7 +83,30 @@ Un closure es la combinación entre una función y el ámbito léxico en el que 
 El ámbito léxico se refiere al alcance de una variable siguiendo la cadena de scopes. Una variable se puede abordar desde un nivel inferior hasta uno superior, pero no al contrario. 
 </p>
 
-# img ambito lexico
+
+```JavaScript 
+ function contador( i ){
+    let acumulador = i;
+    function aumentar (){
+       console.log(acumulador);
+       acumulador = acumulador + 1;
+    }
+    return aumentar
+ }
+ 
+ const closure = contador(1);
+ closure() // 1
+ closure() // 2
+ closure() // 3
+ 
+ const closure2 = contador(10);
+  closure2() // 10
+  closure2() // 11
+  
+  
+  
+  closure() // 4
+```  
 
 <p>
 Podemos asignar la función contador a una variable (_closure_ y _closure2_). Dependiendo del valor que tenga como parámetro, cada variable cambiará el valor inicial por el ámbito léxico, por la que fue originada la variable acumulador que está vinculada con la función aumentar. 
